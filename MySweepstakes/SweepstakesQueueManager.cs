@@ -18,14 +18,15 @@ namespace MySweepstakes
         }
 
         // member methods (CAN DO)
-        public Sweepstakes GetSweepstakes()
-        {
-            throw new NotImplementedException();
-        }
-
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            queue.Enqueue(sweepstakes);
+        }
+
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes sweepstakes = queue.Dequeue();
+            return sweepstakes;
         }
 
     }

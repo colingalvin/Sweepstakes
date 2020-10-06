@@ -12,6 +12,7 @@ namespace MySweepstakes
         {
             Simulation sim = new Simulation();
             sim.CreateMarketingFirmWithManager();
+            sim.marketingFirm.CreateSweepstakes();
         }
     }
 }

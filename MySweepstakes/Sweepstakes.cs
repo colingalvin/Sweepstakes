@@ -19,7 +19,8 @@ namespace MySweepstakes
         // constructor (SPAWN)
         public Sweepstakes(string name)
         {
-
+            contestants = new Dictionary<int, Contestant>();
+            this.name = name;
         }
 
         // member methods (CAN DO)

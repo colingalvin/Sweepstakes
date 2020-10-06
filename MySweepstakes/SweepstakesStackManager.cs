@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MySweepstakes
 {
-    public class SweepstakesStackManager : ISweepstakesManager
+    class SweepstakesStackManager : ISweepstakesManager
     {
         // member variables (HAS A)
         Stack<Sweepstakes> stack;
@@ -18,14 +18,15 @@ namespace MySweepstakes
         }
 
         // member methods (CAN DO)
-        public Sweepstakes GetSweepstakes()
-        {
-            throw new NotImplementedException();
-        }
-
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            stack.Push(sweepstakes);
+        }
+
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes sweepstakes = stack.Pop();
+            return sweepstakes;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace MySweepstakes
     public class Simulation
     {
         // member variables (HAS A)
-        MarketingFirm marketingFirm;
+        public MarketingFirm marketingFirm;
 
         // constructor (SPAWN)
 

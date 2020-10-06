@@ -20,7 +20,9 @@ namespace MySweepstakes
         // member methods (CAN DO)
         public void CreateSweepstakes()
         {
-
+            string userInput = UserInterface.GetUserInputFor("Enter the name of the new sweepstakes: ");
+            Sweepstakes sweepstakes = new Sweepstakes(userInput);
+            manager.InsertSweepstakes(sweepstakes);
         }
     }
 }
