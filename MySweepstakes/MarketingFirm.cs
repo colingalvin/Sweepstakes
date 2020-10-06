@@ -14,7 +14,7 @@ namespace MySweepstakes
         // constructor (SPAWN)
         public MarketingFirm(ISweepstakesManager manager)
         {
-
+            this.manager = manager;
         }
 
         // member methods (CAN DO)

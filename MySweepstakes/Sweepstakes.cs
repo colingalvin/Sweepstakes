@@ -28,10 +28,10 @@ namespace MySweepstakes
 
         }
         
-        public Contestant PickWinner()
-        {
+        //public Contestant PickWinner()
+        //{
 
-        }
+        //}
 
         public void PrintContestantInfo(Contestant contestant)
         {
