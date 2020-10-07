@@ -54,7 +54,7 @@ namespace MySweepstakes
         {
             foreach(KeyValuePair<int, Participant> contestant in contestants)
             {
-                contestant.Value.Notify(winner);
+                contestant.Value.Notify(Name, winner);
             }
         }
 

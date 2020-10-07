@@ -8,6 +8,6 @@ namespace MySweepstakes
 {
     public interface IContestant
     {
-        void Notify(Winner winner);
+        void Notify(string sweepstakesName, Winner winner);
     }
 }

@@ -14,6 +14,6 @@ namespace MySweepstakes
         public string emailAddress;
         public int registrationNumber;
 
-        public abstract void Notify(Winner winner);
+        public abstract void Notify(string sweepstakesName, Winner winner);
     }
 }

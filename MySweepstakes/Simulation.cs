@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MySweepstakes
 {
     public class Simulation
@@ -45,6 +46,11 @@ namespace MySweepstakes
             //sweepstakes.RegisterContestant(colin);
             //sweepstakes.RegisterContestant(keith);
             //sweepstakes.RegisterContestant(phil);
+            //sweepstakes.PickWinner();
+
+            //Sweepstakes sweepstakes = new Sweepstakes("sweepstakes");
+            //Contestant colin = new Contestant();
+            //sweepstakes.RegisterContestant(colin);
             //sweepstakes.PickWinner();
         }
     }
