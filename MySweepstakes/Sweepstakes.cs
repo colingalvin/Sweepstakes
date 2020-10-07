@@ -23,12 +23,13 @@ namespace MySweepstakes
         {
             contestants = new Dictionary<int, Contestant>();
             this.name = name;
-            key = 0;
+            key = 1;
         }
 
         // member methods (CAN DO)
         public void RegisterContestant(Contestant contestant)
         {
+            contestant.registrationNumber = key;
             contestants.Add(key, contestant);
             key++;
         }
@@ -36,9 +37,8 @@ namespace MySweepstakes
         public Contestant PickWinner()
         {
             Random random = new Random();
-            random.Next(0, contestants.Count + 1);
             Contestant winner;
-            contestants.TryGetValue(random.Next(0, contestants.Count + 1), out winner);
+            contestants.TryGetValue(random.Next(1, contestants.Count + 1), out winner);
             return winner;
         }
 

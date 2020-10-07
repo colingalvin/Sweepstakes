@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MySweepstakes
 {
-    class SweepstakesStackManager : ISweepstakesManager
+    public class SweepstakesStackManager : ISweepstakesManager
     {
         // member variables (HAS A)
-        Stack<Sweepstakes> stack;
+        private Stack<Sweepstakes> stack;
 
         // constructor (SPAWN)
         public SweepstakesStackManager()

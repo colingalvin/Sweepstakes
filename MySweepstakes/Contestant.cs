@@ -15,6 +15,12 @@ namespace MySweepstakes
         public int registrationNumber;
 
         // constructor (SPAWN)
+        public Contestant()
+        {
+            firstName = UserInterface.GetUserInputFor("Please enter your first name: ");
+            lastName = UserInterface.GetUserInputFor("Please enter your last name: ");
+            emailAddress = UserInterface.GetUserInputFor("Please enter your email address: ");
+        }
 
         // member methods (CAN DO)
     }

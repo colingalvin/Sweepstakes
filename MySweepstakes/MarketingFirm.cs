@@ -12,6 +12,16 @@ namespace MySweepstakes
         private ISweepstakesManager manager;
 
         // constructor (SPAWN)
+
+        /*
+        
+        This application has the ability to utilize different organizational structures
+        in its implimentation. Both stack or queue data structures will allow the same
+        overall functionality while giving the user the option to choose the structure
+        which best serves their individual needs.
+
+        */
+
         public MarketingFirm(ISweepstakesManager manager)
         {
             this.manager = manager;
