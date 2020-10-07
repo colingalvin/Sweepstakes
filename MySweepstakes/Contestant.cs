@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MySweepstakes
 {
-    public class Contestant : Participant, IContestant
+    public class Contestant : Participant
     {
         // member variables (HAS A)
 

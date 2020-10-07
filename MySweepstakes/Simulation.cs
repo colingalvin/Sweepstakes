@@ -14,24 +14,38 @@ namespace MySweepstakes
         // constructor (SPAWN)
 
         // member methods (CAN DO)
-        public void CreateMarketingFirmWithManager()
+        public ISweepstakesManager CreateMarketingFirmWithManager()
         {
             string managerChoice = UserInterface.GetUserInputFor("Choose Stack or Queue organization structure: ");
+            ISweepstakesManager manager = null;
             switch(managerChoice)
             {
                 case "Stack":
-                    SweepstakesStackManager stack = new SweepstakesStackManager();
-                    marketingFirm = new MarketingFirm(stack);
+                    manager = new SweepstakesStackManager();
                     break;
                 case "Queue":
-                    SweepstakesQueueManager queue = new SweepstakesQueueManager();
-                    marketingFirm = new MarketingFirm(queue);
+                    manager = new SweepstakesQueueManager();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");
-                    CreateMarketingFirmWithManager();
-                    break;
+                    return CreateMarketingFirmWithManager();
             }
+            return manager;
+        }
+
+        public void RunSimulation()
+        {
+            //ISweepstakesManager manager = CreateMarketingFirmWithManager();
+            //marketingFirm = new MarketingFirm(manager);
+
+            //Sweepstakes sweepstakes = new Sweepstakes("sweepstakes");
+            //Contestant colin = new Contestant();
+            //Contestant keith = new Contestant();
+            //Contestant phil = new Contestant();
+            //sweepstakes.RegisterContestant(colin);
+            //sweepstakes.RegisterContestant(keith);
+            //sweepstakes.RegisterContestant(phil);
+            //sweepstakes.PickWinner();
         }
     }
 }

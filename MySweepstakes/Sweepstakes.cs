@@ -37,18 +37,16 @@ namespace MySweepstakes
 
         public Winner PickWinner()
         {
-            Participant chosenWinner;
             Random random = new Random();
-            contestants.TryGetValue(random.Next(1, contestants.Count + 1), out chosenWinner);
-            Winner winner = new Winner(chosenWinner);
-            ReassignWinner(chosenWinner, winner);
+            Winner winner = new Winner(contestants[random.Next(1, contestants.Count + 1)]);
+            ReassignWinner(winner);
             NotifyParticipants(winner);
             return winner;
         }
 
-        private void ReassignWinner(Participant chosenWinner, Winner winner)
+        private void ReassignWinner(Winner winner)
         {
-            contestants.Remove(chosenWinner.registrationNumber);
+            contestants.Remove(winner.registrationNumber);
             contestants.Add(winner.registrationNumber, winner);
         }
 

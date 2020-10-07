@@ -8,7 +8,7 @@ namespace MySweepstakes
 {
     public abstract class Participant : IContestant
     {
-        // member variables
+        // member variables (HAS A)
         public string firstName;
         public string lastName;
         public string emailAddress;
