@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace MySweepstakes
 {
-    public class Contestant
+    public class Contestant : Participant, IContestant
     {
         // member variables (HAS A)
-        public string firstName;
-        public string lastName;
-        public string emailAddress;
-        public int registrationNumber;
 
         // constructor (SPAWN)
         public Contestant()
@@ -22,6 +18,12 @@ namespace MySweepstakes
             emailAddress = UserInterface.GetUserInputFor("Please enter your email address: ");
         }
 
+
         // member methods (CAN DO)
+        public override void Notify(Winner winner)
+        {
+            Console.WriteLine($"Dear {firstName}, we are sorry to inform you that you were not chosen as the winner of this sweepstakes. " +
+                $"Please join us in congratulating our winner, {winner.firstName} {winner.lastName}!");
+        }
     }
 }
