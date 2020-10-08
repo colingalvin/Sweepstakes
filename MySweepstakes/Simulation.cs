@@ -48,10 +48,10 @@ namespace MySweepstakes
             //sweepstakes.RegisterContestant(phil);
             //sweepstakes.PickWinner();
 
-            //Sweepstakes sweepstakes = new Sweepstakes("sweepstakes");
+            //Sweepstakes sweepstakes = new Sweepstakes("Sweepstakes");
             //Contestant colin = new Contestant();
             //sweepstakes.RegisterContestant(colin);
-            //sweepstakes.PickWinner();
+            //sweepstakes.PrintContestantInfo(colin);
         }
     }
 }

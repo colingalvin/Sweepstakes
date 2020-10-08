@@ -39,7 +39,7 @@ namespace MySweepstakes
         {
             Random random = new Random();
             Winner winner = new Winner(contestants[random.Next(1, contestants.Count + 1)]);
-            ReassignWinner(winner);
+            ReassignWinner(winner); // Reassign contestant as winner within dictionary
             NotifyParticipants(winner);
             return winner;
         }

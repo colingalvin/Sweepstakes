@@ -51,7 +51,7 @@ namespace MySweepstakes
             {
                 client.Connect("smtp.gmail.com", 465, true);
 
-                // Note: only needed if the SMTP server requires authentication
+                // Authentication info redacted
                 client.Authenticate("email", "password");
 
                 client.Send(message);
